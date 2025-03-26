@@ -2,3 +2,5 @@
 *.iml
 .idea
 rust/Cargo.lock
+build
+.vscode
