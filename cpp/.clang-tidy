@@ -1,0 +1,55 @@
+Checks: "
+-*,
+bugprone-*,
+cert-*,
+clang-analyzer-*,
+concurrency-*,
+cppcoreguidelines-*,
+google-*,
+hicpp-*,
+misc-*,
+modernize-*,
+readability-*,
+portability-*,
+performance-*,
+-readability-avoid-const-params-in-decls,
+-modernize-use-trailing-return-type,
+-modernize-use-noexcept,
+-bugprone-branch-clone,
+-cppcoreguidelines-special-member-functions
+"
+WarningsAsErrors: ""
+HeaderFilterRegex: ""
+AnalyzeTemporaryDtors: false
+CheckOptions:
+- { key: readability-identifier-naming.NamespaceCase, value: CamelCase }
+- { key: readability-identifier-naming.ClassCase, value: CamelCase }
+- { key: readability-identifier-naming.StructCase, value: CamelCase }
+ 
+- { key: readability-identifier-naming.VariableCase, value: camelBack }
+- { key: readability-identifier-naming.ParameterCase, value: camelBack }
+- { key: readability-identifier-naming.PrivateMemberCase, value: camelBack }
+- { key: readability-identifier-naming.PrivateMemberPrefix, value: 'm_' }
+- { key: readability-identifier-naming.ProtectedMemberCase, value: camelBack }
+- { key: readability-identifier-naming.ProtectedMemberPrefix, value: 'm_' }
+- { key: readability-identifier-naming.GlobalVariableCase, value: camelBack }
+- { key: readability-identifier-naming.GlobalVariablePrefix, value: 'g_' }
+- { key: readability-identifier-naming.StaticVariableCase, value: camelBack }
+- { key: readability-identifier-naming.StaticVariablePrefix, value: 's_' }
+ 
+- { key: readability-identifier-naming.EnumCase, value: CamelCase }
+- { key: readability-identifier-naming.EnumConstantCase, value: UPPER_CASE }
+- { key: readability-identifier-naming.ScopedEnumConstantCase, value: camelBack }
+ 
+- { key: readability-identifier-naming.TemplateParameterCase, value: CamelCase }
+- { key: readability-identifier-naming.ValueTemplateParameterCase, value: CamelCase }
+ 
+- { key: readability-identifier-naming.FunctionCase, value: camelBack }
+- { key: readability-identifier-naming.MethodCase, value: camelBack }
+ 
+- { key: misc-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic, value: 1 } # structs are allowed
+
+- { key: hicpp-uppercase-literal-suffix.NewSuffixes, value: L;UL;ULL}
+- { key: readability-uppercase-literal-suffix.NewSuffixes, value: L;UL;ULL}
+
+- { key: readability-magic-numbers.IgnoreBitFieldsWidths, value: 1}
